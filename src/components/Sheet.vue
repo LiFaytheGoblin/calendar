@@ -33,19 +33,21 @@ export default {
 
 <style lang="scss">
 .sheet, .dayOfWeek {
-  font-size: 1rem;
+  font-size: 0.75rem;
   text-align: center;
 }
 .sheet {
-  padding:0.1rem;
-  margin:0.5rem;
+  margin:0.25rem;
   background-color: #3c3c3c;
   color:#fff9e8;
   border-radius: 0.1rem;
 
   .title {
-    font-size: 1.3rem;
-    padding:.5rem;
+    font-size: 1rem;
+    padding:.175rem;
+    margin-bottom: 0.25rem;
+    background-color: #575555;
+    font-weight: bold;
   }
 }
 .fields {

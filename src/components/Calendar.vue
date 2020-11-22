@@ -1,7 +1,9 @@
 <template>
   <div id="Calendar">
-    <button @click="backward">Zurück</button>
-    <button @click="forward">Weiter</button>
+    <div class="nav">
+      <button @click="backward">Zurück</button>
+      <button @click="forward">Weiter</button>
+    </div>
     <div class="sheets">
       <Sheet :month="m" v-for="m in months" v-bind:key="m.id" />
     </div>
@@ -52,13 +54,13 @@ export default {
 </script>
 
 <style lang="scss">
-#Calendar {
-  width:90%;
-  margin: 0 auto;
+.nav {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
 }
 .sheets {
-    margin: 0;
-    padding: 0;
-    width:20rem;
+    display:grid;
+    grid-template-columns: repeat(3, 22rem);
 }
 </style>

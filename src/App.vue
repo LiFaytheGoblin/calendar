@@ -29,9 +29,11 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 #app {
   font-family: Arial, sans-serif;
   color: #2c3e50;
+  display:grid;
+  justify-content: space-evenly;
 }
 </style>
