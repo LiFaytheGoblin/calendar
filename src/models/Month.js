@@ -29,7 +29,7 @@ class Month {
   previous() {
     let prevMonthsYear = this.#year;
     let prevMonth = this.#month - 1;
-    if(prevMonth < 0) { // 0 = January
+    if(prevMonth < 0) { // 0 = J
       prevMonth = 11;
       prevMonthsYear -= 1;
     }
