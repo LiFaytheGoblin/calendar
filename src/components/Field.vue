@@ -19,5 +19,6 @@ $std-height: 0.5rem;
   padding:$std-height;
   min-height: $std-height * 5;
   background-color: #fff9e8;
+  color:#3c3c3c;
 }
 </style>

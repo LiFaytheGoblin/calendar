@@ -1,14 +1,6 @@
 <template>
   <div id="app">
-    <header>
-    </header>
-    <main>
-      <section>
-        <Calendar :months="3" />
-      </section>
-    </main>
-    <footer>
-    </footer>
+    <Calendar />
   </div>
 </template>
 
