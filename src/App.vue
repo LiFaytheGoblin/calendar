@@ -1,17 +1,38 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <header>
+    </header>
+    <main>
+      <section>
+        <Calendar :months="3" />
+      </section>
+    </main>
+    <footer>
+    </footer>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Calendar from './components/Calendar.vue';
+
+let bookings = [
+    {
+      "user"      : "Karl Schork",
+      "start "    : "2020-12-22",
+      "end"       : "2020-12-30"
+    },
+    {
+      "user"     : "Phillip Hoffmann",
+      "start"     : "2020-12-23",
+      "end"       : "2021-01-02"
+    }
+];
 
 export default {
   name: 'App',
+  bookings: bookings,
   components: {
-    HelloWorld
+    Calendar
   }
 }
 </script>

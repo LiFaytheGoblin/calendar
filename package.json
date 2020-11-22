@@ -9,7 +9,10 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "date-fns": "^2.16.1",
+    "vue": "^2.6.11",
+    "vue-fullcalendar": "^1.0.9",
+    "vuejs-datepicker": "^1.6.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -38,5 +41,7 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "author": "Linda Fernsel",
+  "license": "MIT"
 }
