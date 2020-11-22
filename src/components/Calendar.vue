@@ -1,10 +1,8 @@
 <template>
   <div id="Calendar">
-    <ul>
-      <li v-for="m in months" v-bind:key="m.id">
-        <Sheet :month="m" />
-      </li>
-    </ul>
+    <div class="sheets">
+      <Sheet :month="m" v-for="m in months" v-bind:key="m.id" />
+    </div>
   </div>
 </template>
 
@@ -40,10 +38,14 @@ export default {
 }
 </script>
 
-<style>
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+<style lang="scss">
+#Calendar {
+  width:90%;
+  margin: 0 auto;
+}
+.sheets {
+    margin: 0;
+    padding: 0;
+    width:20rem;
 }
 </style>
