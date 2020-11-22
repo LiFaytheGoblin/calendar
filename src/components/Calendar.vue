@@ -1,5 +1,7 @@
 <template>
   <div id="Calendar">
+    <button @click="backward">Zurück</button>
+    <button @click="forward">Weiter</button>
     <div class="sheets">
       <Sheet :month="m" v-for="m in months" v-bind:key="m.id" />
     </div>
@@ -12,28 +14,39 @@ const Month = require('../models/Month.js');
 
 export default {
   name: 'Calendar',
-  props: [],
-  computed: {
-    initialMonth: function () {
-      const date = new Date();
-      const month = date.getMonth();
-      const year = date.getFullYear();
-      return new Month(year, month);
-    },
-    months: function() {
-      return [this.initialMonth.previous(), this.initialMonth, this.initialMonth.next()];
+  props: {
+    initialMonth: {
+      default: () => {
+        const date = new Date();
+        const month = date.getMonth();
+        const year = date.getFullYear();
+        return new Month(year, month);
+      }
     }
   },
   data() {
     return {
-
+      current: this.initialMonth,
+      months: this.getMonths(this.initialMonth)
     }
   },
   components: {
     Sheet
   },
   methods: {
-
+    forward() {
+      this.current = this.current.next();
+      this.months = this.getMonths(this.current);
+    },
+    backward() {
+      this.current = this.current.previous();
+      this.months = this.getMonths(this.current);
+    },
+    getMonths(baseMonth) {
+      const next = baseMonth.next();
+      const months = [baseMonth, next, next.next()];
+      return months;
+    }
   }
 }
 </script>

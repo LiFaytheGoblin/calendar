@@ -3,7 +3,7 @@
   <div class="title">{{month.month + 1}} / {{month.year}}</div>
   <div class="fields">
     <div v-for="d in daysOfWeek" v-bind:key="d" :label="d" class="dayOfWeek"> {{d}} </div>
-    <div v-for="d in month.startsWith" v-bind:key="d" :label="d" class="dayOfWeek"> </div>
+    <div v-for="d in month.startsWith" v-bind:key="d" :label="d"> </div>
     <Field v-for="d in month.daysOfMonth" v-bind:key="d" :label="d" />
   </div>
 </div>
